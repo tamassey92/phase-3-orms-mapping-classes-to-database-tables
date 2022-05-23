@@ -1,10 +1,8 @@
 class Song
+  # ... rest of song methods
 
-  attr_accessor :name, :album
-
-  def initialize(name:, album:)
-    @name = name
-    @album = album
+  def self.create(name:, album:)
+    song = Song.new(name: name, album: album)
+    song.save
   end
-
 end
